@@ -95,5 +95,93 @@ use download attribute to download a file with a link
 <a href="tel:0112729729">PHONE</a> (use tel: inside the href)
 <a href="https://website.com" target="_blank">RANDOM SITE</a> (open the link in a new tab with target="\_blank")
 
+<nav> - check semantics
+
 ===================================================================================
 IMAGES
+
+-have a seperate file to store static images for the website
+-use <img> tag
+
+- src - give the location of the image
+- alt - alternate text incase the image fails
+- title - this text will show when the cursor is on the image
+- width/height - set the size of the image
+- loading - set to "lazy" if the image is below the fold.
+
+<figure> is a container to wrap around the image perfectly by grouping the image and the caption
+use <figcaption></figcaption> inside figure tags to write a caption.
+make sure <figcaption> is the first or the last inside the figure element
+
+\*\*\*\*although, figure element is not only for images.
+
+using figure elements gives a little indentation to the images and push them to the center.
+image 3 is little indented, less than image 2.
+
+the second image is more towards to the center because its in a list element. so the figure gives indentation to the already indented list element.
+
+can use <code> element to insert a code inside a figure
+
+---
+
+==image sites==
+placehold.co
+unsplash.com
+pexels.com
+gratisography.com
+pixabay.com
+
+irfanview
+
+=====================================================================================
+SEMANTICS
+
+using semantic elements let us nvaigate through different sections and pages of the website.
+
+heirarchy -> 1 <h1> hearders
+
+- <nav> - used to define a section of a page that contains navigation links (either to other pages or different parts within the same page)
+  eg:-
+      <nav>
+          <ul>
+              <li><a href="#html-section">LEARN HTML</a></li>
+              <li><a href="#vacation-section">VACATION </a></li>
+          </ul>
+      </nav>
+
+- <hr> =is also a semantic element meaning there is a topic change.
+- <header> = element is a structural semantic tag used to group introductory content,        navigational links, or branding information. can use the <header> inside <article> or       <section> tags to group title information.
+- <main> = only one main element for a page.
+- <footer> = can have multiple in a page.
+  No nesting headers: You cannot put a <header> inside another <header>.
+  No footers allowed: A <header> cannot contain a <footer> element.
+  It does not mean <head>: This is the most frequent beginner mix-up.
+      <head> is a invisible container for metadata, CSS links, and page titles that stays hidden from the user.
+      <header> is visible layout content that users see on the page.
+  Headings vs. Headers: An <h1> tag is just a text heading. A <header> is a container box that can hold an <h1>, subtitles, images, and other wrapper elements.
+
+semantic tags give meaning to the section of the page and helps screen readers and other functions.
+
+- <article> = The <article> element is a structural semantic tag used to wrap a piece of content that is completely self-contained, independent, and reusable.
+
+<article> vs <section>
+<article> is independent. It is a whole entity on its own (e.g., a whole book, a whole newspaper article).
+
+<section> is dependent. It is a thematic grouping of content, usually used to split up a single larger document into chapters or chunks (e.g., a "Contact Us" section, or "Chapter 1" of an article).
+
+- <aside> = is a structural semantic tag used for content that is tangentially related to the main content around it, but could be separate.
+
+* <details> = is a built-in semantic HTML tag used to create a native accordion widget—a collapsible dropdown section that the user can expand or hide by clicking.
+
+* <summary> = This acts as the clickable heading or label. The browser automatically places a small disclosure triangle (arrow) next to it.
+
+* <mark> = highlights the text within
+
+* <time datetime=""> = when we use time or date
+  eg:- <time datetime="06:00">6 AM</time> (06:00 does not show up but its helpful to assistive technology and the browser)
+  eg:-<time datetime="PT3H">3 hours</time> (3 Hours)
+
+=====================================================================================TABLES
+
+<table>
+<tr> - Table Row

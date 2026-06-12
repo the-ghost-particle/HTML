@@ -12,76 +12,125 @@
 </head>
 
 <body>
-    <h1>HELLO WORLD</h1>
+    <header>
+        <h1>HELLO WORLD</h1>
 
+        <nav>
+            <ul>
+                <li><a href="#html-section">LEARN HTML</a></li>
+                <li><a href="#vacation-section">VACATION </a></li>
+            </ul>
+        </nav>
+    </header>
     <hr>
+    <main>
+        <a href="https://validator.w3.org/#validate_by_upload">Use this to Validate HTML</a>
+        <article id="html-section">
+            <h2>Im Ready to Learn HTML</h2>
+            <p>This is my first web page</p>
+            <section>
+                <h3>HTML5</h3>
+                <img src="img/city.jpg" alt="Lotus Tower Ultra Pro Max" title="How to add Images?" width="639"
+                    height="825">
+                <figure>
+                    <figcaption>City at Dawn</figcaption>
+                    <p>
+                        <code>
+                    &lt;h1&gt;HELLO TEXT!&lt;h1&gt;
+                </code>
+                    </p>
+                </figure>
+            </section>
+            <section>
+                <h3>How I learned web-dev</h3>
+                <p>Let Me Tell You How: </p>
+                <ol>
+                    <li>Followed free-code-camp <abbr title="HyperText Markup Language"><a
+                                href="https://html.spec.whatwg.org/">HTML</a></abbr> tutorial.</li>
+                    <li>Followed free-code-camp <abbr title="Cascading Style Sheets"><a
+                                href="https://www.w3.org/Style/CSS/Overview.en.html">CSS</a></abbr> tutorial.</li>
+                    <li>Followed free-code-camp <abbr title="Java Script"><a
+                                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JS</a></abbr> tutorial.
+                    </li>
+                </ol>
+                <aside>
+                    <details>
+                        <summary>
+                            Guess the <mark> number of hours </mark> I study this
+                        </summary>
+                        <p>
+                            None of your business<br>None of your business <br>None of your business <br>None of your
+                            business <br>I start at <time datetime="06:00">6 AM</time> and I write code for <time
+                                datetime="PT3H">3 hours</time> every morning.
+                        </p>
+                    </details>
+                </aside>
+                <br>
+                <table>
 
-    <nav>
-        <ul>
-            <li><a href="#html-section">LEARN HTML</a></li>
-            <li><a href="#vacation-section">VACATION </a></li>
-        </ul>
-    </nav>
+                </table>
+            </section>
+        </article>
+        <p><strong>After this limit you cannot see on the screen without scrolling down</strong></p>
+        <p><strong>This is called below the Fold</strong></p>
+        <p><strong>Technically we cannot see before this text, but ill consider this the fold</strong></p>
+        <p><strong>Images after this line will get lazy loading</strong></p>
+        <hr>
+        <section id="vacation-section">
+            <h2>Im also planning to learn back-end dev</h2>
+            <p><strong>Still</strong> need to work on front-end dev stuff. Not even <em>close</em> to start node.js</p>
+            <p>I am in Colombo so there is a beach close to us.</p>
+            <section>
+                <h3>Places I'd like to visit</h3>
+                <ul>
+                    <li>
+                        <p>YO MAMA!</p>
+                        <figure>
+                            <img src="img/nightSky.jpg" alt="night camping" title="Live outside like a raccoon"
+                                width="639" loading="lazy">
+                            <figcaption>Camping Under the Starry Sky</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>Jokes aside, I've heard good things about:</p>
+                        <address>
+                            Whitehaven Beach, Queensland, Austrailia <br>
+                            Matira Beach, Bora-Bora, French Polynesia <br>
+                            Baia do Sancho, State of Pernambuco, Brazil
+                        </address>
+                    </li>
+                </ul>
+            </section>
+            <!--TO DO: ADD MORE PLACES TO THE LIST-->
+            <section>
+                <h3>Places I like to avoid</h3>
+                <figure>
+                    <img src="img/flowerSun.jpg" alt="Folowers and the sun" title="Dang! I love this photo" width="639"
+                        loading="lazy">
+                    <figcaption>Flowers and the Sun</figcaption>
+                </figure>
+                <dl>
+                    <dt>North Pole</dt>
+                    <dd>I hear this is <strong>cold</strong>!</dd>
 
+                    <dt>South Pole</dt>
+                    <dd>This is also cold</dd>
+
+                    <dt>Mountain Tops</dt>
+                    <dd>They are also cold!</dd>
+
+                </dl>
+            </section>
+        </section>
+    </main>
     <hr>
-    <a href="https://validator.w3.org/#validate_by_upload">Use this to Validate HTML</a>
-    <section id="html-section">
-        <h2>Im Ready to Learn HTML</h2>
-        <p>This is my first web page</p>
+    <footer>
 
-        <h3>How I learned web-dev</h3>
-        <p>Let Me Tell You How: </p>
-        <ol>
-            <li>Followed free-code-camp <abbr title="HyperText Markup Language"><a
-                        href="https://html.spec.whatwg.org/">HTML</a></abbr> tutorial.</li>
-            <li>Followed free-code-camp <abbr title="Cascading Style Sheets"><a
-                        href="https://www.w3.org/Style/CSS/Overview.en.html">CSS</a></abbr> tutorial.</li>
-            <li>Followed free-code-camp <abbr title="Java Script"><a
-                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JS</a></abbr> tutorial.</li>
-        </ol>
-    </section>
-
-    <hr>
-    <section id="vacation-section">
-        <h2>Im also planning to learn back-end dev</h2>
-        <p><strong>Still</strong> need to work on front-end dev stuff. Not even <em>close</em> to start node.js</p>
-        <p>I am in Colombo so there is a beach close to us.</p>
-
-        <h3>Places I'd like to visit</h3>
-        <ul>
-            <li>
-                <p>YO MAMA!</p>
-            </li>
-            <li>
-                <p>Jokes aside, I've heard good things about:</p>
-                <address>
-                    Whitehaven Beach, Queensland, Austrailia <br>
-                    Matira Beach, Bora-Bora, French Polynesia <br>
-                    Baia do Sancho, State of Pernambuco, Brazil
-                </address>
-            </li>
-        </ul>
-
-        <!--TO DO: ADD MORE PLACES TO THE LIST-->
-        <h3>Places I like to avoid</h3>
-        <dl>
-            <dt>North Pole</dt>
-            <dd>I hear this is <strong>cold</strong>!</dd>
-
-            <dt>South Pole</dt>
-            <dd>This is also cold</dd>
-
-            <dt>Mountain Tops</dt>
-            <dd>They are also cold!</dd>
-
-        </dl>
-    </section>
-    <hr>
-
-    &lt;&lt;&lt; &copy; <a href="about.html">KUkwattage</a> &gt;&gt;&gt;
-    <P>
-        <a href="#">Back to Top</a>
-    </P>
+        <p>&lt;&lt;&lt; &copy; <a href="about.html">KUkwattage</a> &gt;&gt;&gt;</p>
+        <P>
+            <a href="#">Back to Top</a>
+        </P>
+    </footer>
 </body>
 
 </html>
