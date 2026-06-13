@@ -140,7 +140,7 @@ using semantic elements let us nvaigate through different sections and pages of 
 
 heirarchy -> 1 <h1> hearders
 
-- <nav> - used to define a section of a page that contains navigation links (either to other pages or different parts within the same page)
+<nav> - used to define a section of a page that contains navigation links (either to other pages or different parts within the same page)
   eg:-
       <nav>
           <ul>
@@ -149,10 +149,10 @@ heirarchy -> 1 <h1> hearders
           </ul>
       </nav>
 
-- <hr> =is also a semantic element meaning there is a topic change.
-- <header> = element is a structural semantic tag used to group introductory content,        navigational links, or branding information. can use the <header> inside <article> or       <section> tags to group title information.
-- <main> = only one main element for a page.
-- <footer> = can have multiple in a page.
+<hr> =is also a semantic element meaning there is a topic change.
+<header> = element is a structural semantic tag used to group introductory content,        navigational links, or branding information. can use the <header> inside <article> or       <section> tags to group title information.
+<main> = only one main element for a page.
+<footer> = can have multiple in a page.
   No nesting headers: You cannot put a <header> inside another <header>.
   No footers allowed: A <header> cannot contain a <footer> element.
   It does not mean <head>: This is the most frequent beginner mix-up.
@@ -162,26 +162,96 @@ heirarchy -> 1 <h1> hearders
 
 semantic tags give meaning to the section of the page and helps screen readers and other functions.
 
-- <article> = The <article> element is a structural semantic tag used to wrap a piece of content that is completely self-contained, independent, and reusable.
+<article> = The <article> element is a structural semantic tag used to wrap a piece of content that is completely self-contained, independent, and reusable.
 
 <article> vs <section>
 <article> is independent. It is a whole entity on its own (e.g., a whole book, a whole newspaper article).
 
 <section> is dependent. It is a thematic grouping of content, usually used to split up a single larger document into chapters or chunks (e.g., a "Contact Us" section, or "Chapter 1" of an article).
 
-- <aside> = is a structural semantic tag used for content that is tangentially related to the main content around it, but could be separate.
+<aside> = is a structural semantic tag used for content that is tangentially related to the main content around it, but could be separate.
 
-* <details> = is a built-in semantic HTML tag used to create a native accordion widget—a collapsible dropdown section that the user can expand or hide by clicking.
+<details> = is a built-in semantic HTML tag used to create a native accordion widget—a collapsible dropdown section that the user can expand or hide by clicking.
 
-* <summary> = This acts as the clickable heading or label. The browser automatically places a small disclosure triangle (arrow) next to it.
+<summary> = This acts as the clickable heading or label. The browser automatically places a small disclosure triangle (arrow) next to it.
 
-* <mark> = highlights the text within
+<mark> = highlights the text within
 
-* <time datetime=""> = when we use time or date
+<time datetime=""> = when we use time or date
   eg:- <time datetime="06:00">6 AM</time> (06:00 does not show up but its helpful to assistive technology and the browser)
   eg:-<time datetime="PT3H">3 hours</time> (3 Hours)
 
-=====================================================================================TABLES
+=====================================================================================
+TABLES
 
-<table>
-<tr> - Table Row
+<table> -  Table stores tabular data  (arrange items in the table to columns and rows)
+<tr> - Table Row (Define a row and th or td in the row act as columns)
+<td> - Table Details (Add content in the row as columns)
+<th> - Table Headings (Add heading to the table inside a row) (by default it is centered, bold)
+<caption> - To add a caption to the table. (Will create a row on top of the table without breaking into columns)
+<thead>, <tbody>, <tfooter> - To cover header, body and the footer of the table. Won't change the appearance, but will give semantic meaning. 
+
+** unlike other block level elements table do not take the whole space to the right.
+** it takes enough to wrap the content inside.
+
+<td> has attributes like colspan and rowspan to stretch columns and rows for more than one
+** add <th> inside <tr> which already has <td> content to give a table heading on the left side. 
+** use scope="" attribute inside the <th> tag to define if its a column heading or row heading
+eg:- <th scope="col"> to headings that display 'Time' and 'Activity'
+    <th scope="row"> to heading that display 'Morning', 'Noon', 'Afternoon'...
+
+=======================================================================================
+FORMS AND INPUT
+
+<form> - to create a form to collect data from the user.
+** by default it comes with action attribute, and we should give where we send data collected from this form.
+** content inside forms are typically lables and input
+<fieldset> - draws a box around the form
+<legend> - caption the box
+<label> - to describe the input to the user. 
+** by default label gets for attribute in the tag. the for value should match the id value of the input tag
+<input> - to get the actual data from the user.
+** type - (text, button, checkbox..etc). 
+        - type 'tel' for phone numbers. type 'number' will give two arrows up and down. 'tel' will give numbere pad for mobiles
+        - type 'number' have min, max values, step (+ or - by how much), value (default value)
+        - 'list' makes a list
+        eg:- <input type="text" name="coffee" id="coffee" list="coffee-list">
+        - radio gives a mcq type selection. 'name' attribute must be the same for every input
+        - checkbox is pretty much the same as radio.
+        - there cannot be id named 'other'/ or anyother same name to choices.
+
+** name - attribute is what the serverside use to identify the tag. When we send data to the server, the data is labeld with the value in the name attribute.  
+** id - is the id value of the tag.
+** placeholder - is the string that displays inside the input window. its holding the place of whatever value will be put in. 
+** autocomplete - 'on' or 'off' to suggest previously entered inputs. (not suppored for password type)
+** required - to make it a required field on the form. doesnt need any value to it. 
+** autofocus - when we load the page, it will be the first thing to get input, with the cursor attached to it.
+                can be only used in one form input.
+** pattern - to get input in a specific pattern. the input has to match that.
+
+** id, and for(lable) should be identical
+<select> - gives a dropdown selector with options.
+         - select has 'name' and 'id' attribute like input. id should match for ( in lable)
+         - 'multiple' attribute allows the user to pick multiple options.
+         - 'size' will show that amount of options at once without dropdown in a scrollable menu. (it includes optgroup values.) 
+
+<options> - options inside of a select dropdown.
+          -'value' attribute to give value name.
+          -'selected' attribute to mark an option as default selected.
+<optgroup> - use to group options of the options.
+           - 'label' attribute in optgroup will show as group heading.
+
+<datalist> - creates a field to type and choices.
+         <input type="text" name="coffee" id="coffee" list="coffee-list">        
+    eg:- <datalist id="coffee-list">
+            <option value="regular coffee">
+        (list id and datalist id must be the same)
+        (no closing tags in <option> in this)
+
+<textarea> - to get a text box. 
+            - 'cols' and 'rows' attributes
+
+*** can use 'formaction' and 'formmethod' attributes inside <button> tag to use 'post' method instead of 'get' to send data.
+<button type="submit" formaction="https://httpbin.org/post" formmethod="post">Post</button>
+
+**** when submitting form data using 'get' or <input> <datalist> way, it shows the transmitted data inside the url. not safe. use POST for submitting data.
